@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+        display: ['Playfair Display', 'serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -57,33 +61,61 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Devotional custom colors
+        saffron: {
+          DEFAULT: "hsl(var(--saffron))",
+          light: "hsl(var(--saffron-light))",
+          dark: "hsl(var(--saffron-dark))",
+        },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          light: "hsl(var(--gold-light))",
+        },
+        cream: "hsl(var(--cream))",
+        maroon: "hsl(var(--maroon))",
+        "temple-brown": "hsl(var(--temple-brown))",
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      boxShadow: {
+        'soft': 'var(--shadow-soft)',
+        'card': 'var(--shadow-card)',
+        'elevated': 'var(--shadow-elevated)',
+        'glow': 'var(--shadow-glow)',
+      },
+      backgroundImage: {
+        'gradient-saffron': 'var(--gradient-saffron)',
+        'gradient-gold': 'var(--gradient-gold)',
+        'gradient-divine': 'var(--gradient-divine)',
+        'gradient-sunset': 'var(--gradient-sunset)',
+        'hero-overlay': 'var(--gradient-hero-overlay)',
+      },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        "shimmer": {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 3s ease-in-out infinite",
+        "shimmer": "shimmer 2s linear infinite",
       },
     },
   },
