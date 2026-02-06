@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X, MapPin, LogIn } from 'lucide-react';
+import { Menu, X, LogIn } from 'lucide-react';
 import { useState } from 'react';
 
 const PublicNavbar = () => {
@@ -26,7 +26,7 @@ const PublicNavbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-full bg-gradient-saffron flex items-center justify-center">
-              <MapPin className="w-5 h-5 text-primary-foreground" />
+              <span className="text-xl font-display text-primary-foreground">ॐ</span>
             </div>
             <div className="hidden sm:block">
               <h1 className="font-display text-lg font-bold text-foreground leading-tight">
